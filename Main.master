@@ -1,0 +1,71 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Main.master.cs" Inherits="Main" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="Style/main.css" rel="stylesheet" />
+    <title>Aadhaar based Voting System</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            text-align: center;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <div class = "page">
+
+
+    <div id = "Header">
+
+        <asp:Image ID="Image1" runat="server" Height="180px" ImageAlign="Top" ImageUrl="~/Images/IndiaFlag.jpg" Width="1000px" />
+
+        </div>
+
+    <div><h2 class="auto-style1">Aadhaar Card Voting System</h2>
+
+        </div>
+            <div style = "margin : 0px auto 0px auto; width : 600px;">
+        <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" Width="800px" StaticSubMenuIndent="16px" StaticDisplayLevels="2" ForeColor="#FF3300">
+            <DynamicHoverStyle BackColor="White" ForeColor="#6600FF" />
+            <Items>
+                <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/Home.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="Voter Login" Value="Voter Login" NavigateUrl="~/VoterLogin.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="Voter Registration" Value="Voter Registration" NavigateUrl="~/VoterRegistration.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="Candidate Information" Value="Candidate Information" NavigateUrl="~/CandidateInfo.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="About UIDAI" Value="About UIDAI" NavigateUrl="~/About.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="Results" Value="Results" NavigateUrl="~/Results.aspx"></asp:MenuItem>
+            </Items>
+            <StaticMenuItemStyle HorizontalPadding="10px" />
+        </asp:Menu></div>
+
+    <div id = "contentpart">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        
+        </asp:ContentPlaceHolder>
+        </div>
+            <br />
+            <br />
+
+
+    <div id = "Footer">
+        
+        <asp:Image ID="Image2" runat="server" Height="138px" ImageUrl="~/Images/UPES Logo.jpg" Width="143px" />
+        <br />
+        &copy Aadhaar based E-Voting System (December- 2017)
+
+         </div>
+
+
+</div>
+
+
+    </form>
+</body>
+</html>

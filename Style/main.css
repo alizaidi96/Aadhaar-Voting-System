@@ -1,0 +1,13 @@
+﻿body {    
+    text-align: center;
+    background-image: url('../Images/grey.jpg');
+}
+.page
+{
+    width : 1000px;
+    margin : 0px auto 0px auto;
+}
+#contentpart {
+    background-color : white;
+   
+}

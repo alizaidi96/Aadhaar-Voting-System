@@ -1,0 +1,70 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="Admin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="~/Style/main.css" rel="stylesheet" />
+    <title>Aadhaar based Voting System</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            text-align: center;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <div class = "page">
+
+
+    <div id = "Header">
+
+        <asp:Image ID="Image1" runat="server" Height="180px" ImageAlign="Top" ImageUrl="~/Images/IndiaFlag.jpg" Width="1000px" />
+
+        </div>
+
+    <div><h2 class="auto-style1">Aadhaar Card Voting System</h2>
+
+        </div>
+            <div style = "margin : 0px auto 0px auto; width : 600px;">
+        <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" Width="800px" StaticSubMenuIndent="16px" StaticDisplayLevels="2" ForeColor="#FF3300">
+            <DynamicHoverStyle BackColor="White" ForeColor="#6600FF" />
+            <Items>
+                 <asp:MenuItem Text="Home" Value="AdminHome" NavigateUrl="~/AdminPanel/AdminHome.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="Add Voter" Value="Add Voter" NavigateUrl="~/AdminPanel/AddVoter.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="Remove Voter" Value="Remove Voter" NavigateUrl="~/AdminPanel/RemoveVoter.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="Add Candidate" Value="Add Candidate" NavigateUrl="~/AdminPanel/AddCandidate.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="RemoveCandidate" Value="Remove Candidate" NavigateUrl="~/AdminPanel/RemoveCandidate.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="Results" Value="Admin Results" NavigateUrl="~/AdminPanel/AdminResults.aspx"></asp:MenuItem>
+            </Items>
+            <StaticMenuItemStyle HorizontalPadding="10px" />
+        </asp:Menu></div>
+
+    <div id = "contentpart">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        
+        </asp:ContentPlaceHolder>
+        </div>
+
+<br />
+<br />
+    <div id = "Footer">
+        
+        <asp:Image ID="Image2" runat="server" Height="138px" ImageUrl="~/Images/UPES Logo.jpg" Width="143px" />
+        <br />
+        &copy Aadhaar based E-Voting System (December- 2017)
+
+         </div>
+
+
+</div>
+
+
+    </form>
+</body>
+</html>
